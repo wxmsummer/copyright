@@ -1,0 +1,33 @@
+<div id="nav">
+    <div id="nav-write-article">
+        <ul>
+        {{/*如果已经登录，才会显示"版权登记"*/}}
+        {{if .IsLogin}}
+            <li><a href="/copyright/add">版权登记</a></li>
+        {{end}}
+        </ul>
+    </div>
+
+
+    <div id="nav-menu">
+        <ul>
+            <li><a href="/copyright/home">首页</a></li>
+            <li><a href="/copyright/query">版权查询</a></li>
+            <li><a href="/copyright/check">文件校验</a></li>
+            <li><a href="/copyright/transaction">交易查询</a></li>
+        </ul>
+    </div>
+
+
+    <div id="nav-login">
+        <ul>
+        {{if .IsLogin}}
+            <li><a href='javascript:if(confirm("确定退出吗？")){location="/exit"}'>退出</a></li>
+        {{else}}
+            <li><a href="/login">登录</a></li>
+            <li><a href="/register">注册</a></li>
+        {{end}}
+        </ul>
+    </div>
+
+</div>
